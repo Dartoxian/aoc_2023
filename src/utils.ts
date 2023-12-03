@@ -38,3 +38,14 @@ export function* inclusiveRange(
     yield i;
   }
 }
+
+export function* cellsAround(i: number, j: number) {
+  yield [i - 1, j + 1];
+  yield [i, j + 1];
+  yield [i + 1, j + 1];
+  yield [i - 1, j];
+  yield [i + 1, j];
+  yield [i - 1, j - 1];
+  yield [i, j - 1];
+  yield [i + 1, j - 1];
+}
