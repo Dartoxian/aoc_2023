@@ -49,3 +49,11 @@ export function* cellsAround(i: number, j: number) {
   yield [i, j - 1];
   yield [i + 1, j - 1];
 }
+
+export function gcd(a: number, b: number): number {
+  return a === 0 ? b : gcd(b % a, a);
+}
+
+export function lcm(a: number, b: number): number {
+  return (a * b) / gcd(a, b);
+}
